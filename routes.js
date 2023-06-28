@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs');
 
 const requestHandler = (req, res) => {
@@ -6,9 +7,7 @@ const requestHandler = (req, res) => {
   if (url === '/') {
     res.write('<html>');
     res.write('<head><title>Enter Message</title></head>');
-    res.write(
-      '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>'
-    );
+		res.write('<body><h1>Add Products Page</h1><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>');
     res.write('</html>');
 		return res.end();
 	}
